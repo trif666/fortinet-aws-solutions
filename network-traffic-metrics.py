@@ -97,8 +97,10 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--interface', '-i', default=os.getenv('NTM_INTERFACE', 'eth0'),
+    # parser.add_argument('--interface', '-i',
         help='The network interface to monitor.')
     parser.add_argument('--port', '-p', default=int(os.getenv('NTM_PORT', 8000)),
+    # parser.add_argument('--port', '-p',
         help='The Prometheus metrics port.')
     parser.add_argument('--metric_prefix', '-s', default=os.getenv('NTM_METRIC_PREFIX', 'ntm'),
         help='Metric prefix (group) for Prometheus')
